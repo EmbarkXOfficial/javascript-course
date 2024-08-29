@@ -1,46 +1,78 @@
 /*
-Types of Operators in JavaScript:
+Assignment Operators:
+   - Assignment (=)
+   - Addition assignment (+=)
+   - Subtraction assignment (-=)
+   - Multiplication assignment (*=)
+   - Division assignment (/=)
+*/
 
-1. Arithmetic Operators:
-   - Addition (+)
-   - Subtraction (-)
-   - Multiplication (*)
-   - Division (/)
-   - Modulus (%)
+// Assignment (=)
+let a = 5;
+console.log("a:", a);
+
+// Addition assignment (+=)
+let b = 10;
+// b = b + 3;
+b += 3; // Equivalent to: b = b + 3;
+console.log("b:", b);
+
+
+// Subtraction assignment (-=)
+let c = 15;
+// c = c - 5;
+c -= 5; // Equivalent to: c = c - 5;
+console.log("c:", c); // Output: 10
+
+
+// Multiplication assignment (*=)
+let d = 6;
+// d = d * 2;
+d *= 2; // Equivalent to: d = d * 2;
+console.log("d:", d); // Output: 12
+
+
+
+// Division assignment (/=)
+let e = 20;
+e /= 4; // Equivalent to: e = e / 4;
+console.log("e:", e); // Output: 5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+3. Comparison Operators:
+   - Equality (==)
+   - Strict equality (===)
+   - Inequality (!=)
+   - Strict inequality (!==)
+   - Greater than (>)
+   - Less than (<)
+   - Greater than or equal to (>=)
+   - Less than or equal to (<=)
+
+4. Logical Operators:
+   - Logical AND (&&)
+   - Logical OR (||)
+   - Logical NOT (!)
+
+5. Unary Operators:
    - Increment (++)
-   - Decrement (--) */
+   - Decrement (--)
+   - typeof operator
+   - Logical NOT (!)
 
-// Addition (+)
-let additionResult = 5 + 3;
-console.log("Addition Result:", additionResult); // Output: 8
-
-// Subtraction (-)
-let subtractionResult = 10 - 3;
-console.log("Subtraction Result:", subtractionResult); // Output: 7
-
-// Multiplication (*)
-let multiplicationResult = 4 * 6;
-console.log("Multiplication Result:", multiplicationResult); // Output: 24
-
-// Division (/)
-let divisionResult = 20 / 4;
-console.log("Division Result:", divisionResult); // Output: 5
-
-// Modulus (%)
-let modulusResult = 20 % 7;
-console.log("Modulus Result:", modulusResult);
-
-
-// Increment (++)
-let x = 5;
-// x = x + 1;
-x++;
-x++;
-console.log("Incremented Result:", x);
-
-// Decrement (--)
-let y = 5;
-// y = y - 1;
-y--;
-y--;
-console.log("Decremented Result:", y);
+6. Ternary Operator:
+   - Conditional operator (condition ? value1 : value2)
+*/
