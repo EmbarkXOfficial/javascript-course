@@ -1,22 +1,3 @@
-// EXPRESSION
-// An expression in JavaScript is any valid 
-// unit of code that produces a value
-
-
-// LITERAL
-// A literal is a fixed value that you write 
-// directly in the code.
-
-
-// OPERATORS
-// Operators in JavaScript are symbols that 
-// perform operations on operands.
-
-
-
-
-
-
 /*
 Types of Operators in JavaScript:
 
@@ -27,36 +8,39 @@ Types of Operators in JavaScript:
    - Division (/)
    - Modulus (%)
    - Increment (++)
-   - Decrement (--)
+   - Decrement (--) */
 
-2. Assignment Operators:
-   - Assignment (=)
-   - Addition assignment (+=)
-   - Subtraction assignment (-=)
-   - Multiplication assignment (*=)
-   - Division assignment (/=)
+// Addition (+)
+let additionResult = 5 + 3;
+console.log("Addition Result:", additionResult); // Output: 8
 
-3. Comparison Operators:
-   - Equality (==)
-   - Strict equality (===)
-   - Inequality (!=)
-   - Strict inequality (!==)
-   - Greater than (>)
-   - Less than (<)
-   - Greater than or equal to (>=)
-   - Less than or equal to (<=)
+// Subtraction (-)
+let subtractionResult = 10 - 3;
+console.log("Subtraction Result:", subtractionResult); // Output: 7
 
-4. Logical Operators:
-   - Logical AND (&&)
-   - Logical OR (||)
-   - Logical NOT (!)
+// Multiplication (*)
+let multiplicationResult = 4 * 6;
+console.log("Multiplication Result:", multiplicationResult); // Output: 24
 
-5. Unary Operators:
-   - Increment (++)
-   - Decrement (--)
-   - typeof operator
-   - Logical NOT (!)
+// Division (/)
+let divisionResult = 20 / 4;
+console.log("Division Result:", divisionResult); // Output: 5
 
-6. Ternary Operator:
-   - Conditional operator (condition ? value1 : value2)
-*/
+// Modulus (%)
+let modulusResult = 20 % 7;
+console.log("Modulus Result:", modulusResult);
+
+
+// Increment (++)
+let x = 5;
+// x = x + 1;
+x++;
+x++;
+console.log("Incremented Result:", x);
+
+// Decrement (--)
+let y = 5;
+// y = y - 1;
+y--;
+y--;
+console.log("Decremented Result:", y);
