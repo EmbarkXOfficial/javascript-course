@@ -1,49 +1,95 @@
 /*
-Comparison Operators:
-   - Equality (==)
-   - Strict equality (===)
-   - Inequality (!=)
-   - Strict inequality (!==)
-   - Greater than (>)
-   - Less than (<)
-   - Greater than or equal to (>=)
-   - Less than or equal to (<=)
+Logical Operators:
+   - Logical AND (&&)
+   - Logical OR (||)
+   - Logical NOT (!)
 */
 
-// Equality (==)
-let a = 5;
-let b = 5;
-console.log(5 == 6);
-console.log(a == b);
-console.log(typeof '6');
-console.log(5 == '5');
 
-// Strict equality (===)
-console.log('5' === '6');
+/* 
+1. Logical AND (&&)
+   - The AND operator (&&) checks if BOTH 
+   conditions are true.
+   - It returns true only if both are true, 
+   otherwise, it returns false.
+*/
 
+console.log(true && true);
+console.log(true && false);
+console.log(false && true);
+console.log(false && false);
 
-// Inequality (!=)
-console.log(3 != 3);
-console.log(3 != '3');
+// Example
+let hasTickets = true;
+let hasId = true;
+console.log(hasTickets && hasId)
 
-// Strict inequality (!==)
-console.log(3 !== '3');
-console.log('5' !== '5');
+hasId = false;
+console.log(hasTickets && hasId)
 
-
-// - Greater than (>)
-// - Less than (<)
-console.log(5 > 3);
-console.log(5 > 7);
-
-console.log(5 < 3);
-console.log(5 < 7);
+console.log((5 > 3) && (5 > 6));
 
 
-// - Greater than or equal to (>=)
-// - Less than or equal to (<=)
-console.log(5 <= 5);
-console.log(5 >= 5);
+
+/*
+2. Logical OR (||)
+   - The OR operator (||) checks if AT LEAST 
+   ONE condition is true.
+   - It returns true if at least one value is 
+   true; if both are false, it returns false.
+*/
+
+
+console.log(true || true);
+console.log(true || false);
+console.log(false || true);
+console.log(false || false);
+
+
+let isSunny = false;
+let hasRaincoat = true;
+console.log(isSunny || hasRaincoat);
+hasRaincoat = false;
+console.log(isSunny || hasRaincoat);
+
+
+
+
+/*
+3. Logical NOT (!)
+   - The NOT operator (!) inverts the value 
+   of a Boolean.
+   - It turns true into false and false into 
+   true.
+*/
+
+console.log(!true);
+
+let isRaining = true;
+let shouldStayInside = !isRaining;
+console.log(shouldStayInside);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -57,11 +103,6 @@ console.log(5 >= 5);
 
 
 /*
-4. Logical Operators:
-   - Logical AND (&&)
-   - Logical OR (||)
-   - Logical NOT (!)
-
 5. Unary Operators:
    - Increment (++)
    - Decrement (--)
