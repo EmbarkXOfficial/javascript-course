@@ -1,44 +1,49 @@
 /*
-Assignment Operators:
-   - Assignment (=)
-   - Addition assignment (+=)
-   - Subtraction assignment (-=)
-   - Multiplication assignment (*=)
-   - Division assignment (/=)
+Comparison Operators:
+   - Equality (==)
+   - Strict equality (===)
+   - Inequality (!=)
+   - Strict inequality (!==)
+   - Greater than (>)
+   - Less than (<)
+   - Greater than or equal to (>=)
+   - Less than or equal to (<=)
 */
 
-// Assignment (=)
+// Equality (==)
 let a = 5;
-console.log("a:", a);
+let b = 5;
+console.log(5 == 6);
+console.log(a == b);
+console.log(typeof '6');
+console.log(5 == '5');
 
-// Addition assignment (+=)
-let b = 10;
-// b = b + 3;
-b += 3; // Equivalent to: b = b + 3;
-console.log("b:", b);
-
-
-// Subtraction assignment (-=)
-let c = 15;
-// c = c - 5;
-c -= 5; // Equivalent to: c = c - 5;
-console.log("c:", c); // Output: 10
+// Strict equality (===)
+console.log('5' === '6');
 
 
-// Multiplication assignment (*=)
-let d = 6;
-// d = d * 2;
-d *= 2; // Equivalent to: d = d * 2;
-console.log("d:", d); // Output: 12
+// Inequality (!=)
+console.log(3 != 3);
+console.log(3 != '3');
+
+// Strict inequality (!==)
+console.log(3 !== '3');
+console.log('5' !== '5');
 
 
+// - Greater than (>)
+// - Less than (<)
+console.log(5 > 3);
+console.log(5 > 7);
 
-// Division assignment (/=)
-let e = 20;
-e /= 4; // Equivalent to: e = e / 4;
-console.log("e:", e); // Output: 5
+console.log(5 < 3);
+console.log(5 < 7);
 
 
+// - Greater than or equal to (>=)
+// - Less than or equal to (<=)
+console.log(5 <= 5);
+console.log(5 >= 5);
 
 
 
@@ -52,16 +57,6 @@ console.log("e:", e); // Output: 5
 
 
 /*
-3. Comparison Operators:
-   - Equality (==)
-   - Strict equality (===)
-   - Inequality (!=)
-   - Strict inequality (!==)
-   - Greater than (>)
-   - Less than (<)
-   - Greater than or equal to (>=)
-   - Less than or equal to (<=)
-
 4. Logical Operators:
    - Logical AND (&&)
    - Logical OR (||)
