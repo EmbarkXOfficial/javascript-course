@@ -1,57 +1,70 @@
 /*
-JavaScript Objects
-
-Objects allow you to group related data and 
-functions together. 
-
-An object is created using curly braces `{}` 
-and contains key-value pairs, where each key 
-(also called a property) is associated with 
-a value.
-
+Type Conversion
+- Javascript is a loosely typed language
+- Javascript supports implicit and explicit 
+        conversion
 */
 
-let person = {
-        name: "Alice",
-        age: 25,
-        isStudent: true
-}
-console.log(person);
+let example1 = '5' + 1; // '5' + '1'
+console.log(example1);
+console.log(typeof example1);
 
-// Accessing Properties
-console.log(person.age);
-console.log(person["age"]);
+// console.log("Hi" + "hello")
 
-// Adding or Updating Properties
-person.age = 66;
-console.log(person.age);
-console.log(person);
-
-person.job = "Engineer";
-console.log(person);
-console.log(person.job);
-
-// Deleting Properties
-delete person.isStudent;
-console.log(person);
-
-// Check if property exist
-console.log('name' in person);
-console.log(person.hasOwnProperty("age"));
+let example2 = '5' - 1;
+console.log(example2);
+console.log(typeof example2);
 
 
-// Nested Objects
-let student = {
-        name: "Bob",
-        courses : {
-                math: true,
-                science: false
-        }
-}
-console.log(student);
-console.log(student.courses.math);
+let example3 = '5' * 1;
+console.log(example3);
+console.log(typeof example3);
 
-// Object Destructuring
-let {name, courses} = student;
-console.log(name);
-console.log(courses);
+let example4 = true + 1;
+console.log(example4);
+console.log(typeof example4);
+
+
+// Converting values explicitely
+
+// toString(), String()
+let num = 123;
+let bool = true;
+
+let numToString = String(num);
+console.log(numToString, typeof numToString);
+let boolToString = String(bool);
+console.log(boolToString, typeof boolToString);
+
+let numToString1 = num.toString();
+console.log(numToString1, typeof numToString1);
+let boolToString1 = bool.toString();
+console.log(boolToString1, typeof boolToString1);
+
+// Number(), parseInt(), parseFloat()
+let strNum = "456";
+let strFloat = "12.55";
+
+let strToNum = Number(strNum);
+console.log(strToNum, typeof strToNum);
+
+let strToInt = parseInt(strFloat);
+console.log(strToInt, typeof strToInt);
+
+let strToFloat = parseFloat(strFloat);
+console.log(strToFloat, typeof strToFloat);
+
+let invalidNum = Number("hello");
+console.log(invalidNum, typeof invalidNum);
+
+// Boolean()
+
+let zero = 0;
+let nonEmptyString = "Hello";
+
+let zeroToBoolean = Boolean(zero);
+console.log(zeroToBoolean, typeof zeroToBoolean);
+
+let strToBoolean = Boolean(nonEmptyString);
+console.log(strToBoolean, typeof strToBoolean);
+
