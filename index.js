@@ -1,8 +1,10 @@
-let colorPara = document.getElementById('color');
-colorPara.textContent = "#FFFFFF";
+document.getElementById('convert').onclick = function() {
+  let temp = parseFloat(document.getElementById("temp").value);
+  let unit = document.getElementById("unit").value;
+  
+  let convertedTemp = (unit === 'C')
+  ? (temp * 9/5) + 32 // Convert C to F
+  : (temp - 32) * 5/9 // Convert F to C
 
-document.getElementById('generate').onclick = function() {
-        let randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
-        colorPara.textContent = randomColor;
-        document.body.style.backgroundColor = randomColor;
+  document.getElementById("converted").textContent = convertedTemp.toFixed(2);
 };
