@@ -1,24 +1,75 @@
 /*
-Ternary Operator:
-   - Conditional operator 
-   (condition ? value1 : value2)
+1. Arrays
+   Arrays are used to store multiple values in 
+   a single variable.
+
+   Creating Arrays:
+   You can create an array by enclosing its 
+   elements within square brackets ([]).
 */
 
-let x = 4;
-let message = (x > 5) ? "x is > 5" : "x is < 5";
-console.log(message);
+let numbers = [1, 2, 3, 4]
+console.log(numbers);
+
+let fruits = ["apple", "banana", "orange"]
+console.log(fruits);
+
+// [1, 2, 3, 4]
+//  0  1  2  3
+console.log(numbers[3]);
+console.log(fruits[1]);
+
+fruits[1] = "cherry";
+console.log(fruits[1]);
+
+let matrix = [
+        [1,2,3],
+        [4,5,6],
+        [7,8,9]
+]
+console.log(matrix[0]);
+console.log(matrix[0][1]);
 
 
-let number = 5;
-let result = (number % 2 === 0) ? "even" : "odd";
-console.log(result);
+/*
+push(): Adds an element to the end.
+pop(): Removes the last element.
+shift(): Removes the first element.
+unshift(): Adds an element to the beginning.
+slice(): Copies a portion of an array.
+splice(): Adds or removes elements at a 
+        specific index.
+*/
 
-// Nested Ternary Operator
-// age < 13 -> Child
-// age 13-20 -> Teenager
-// age > 20 -> Adult
+console.log(fruits.length);
 
-let age = 22;
-let category = (age < 13) ? "Child" : 
-        (age < 20 ) ? "Teenager" : "Adult";
-console.log(category);
+// push()
+fruits.push("banana");
+console.log(fruits);
+console.log(fruits.length);
+
+// pop()
+let lastFruit = fruits.pop();
+console.log(fruits);
+console.log(lastFruit);
+
+// shift()
+let firstFruit = fruits.shift();
+console.log(fruits);
+console.log(firstFruit);
+
+// unshift()
+let newLength = fruits.unshift("apple again");
+console.log(fruits);
+console.log(newLength);
+
+// slice()
+let newFruits = ["apple", "banana", "orange", 
+        "strawberry"]
+let slicedArray = newFruits.slice(1,3);
+console.log(slicedArray);
+
+// splice()
+let deletedItems = fruits.splice(1,2, "New Item", "New Item Again");
+console.log(fruits);
+console.log(deletedItems);
