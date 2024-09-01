@@ -25,7 +25,7 @@ console.log(example4);
 console.log(typeof example4);
 
 
-// Converting values explicitely
+// Converting values explicitly
 
 // toString(), String()
 let num = 123;
