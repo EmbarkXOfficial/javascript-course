@@ -1,57 +1,51 @@
-function greet(name, age) {
-  console.log(`Hello, ${name}!`, typeof name);
-  console.log(`You are ${age} years old`, typeof age);
-  console.log("You are now logged in.");
+function getSquare(number) {
+  // let result = number * number;
+  // return result;
+
+  return number * number;
+  // console.log("Hi");
 }
 
-// Function with default parameter value
-function greetPerson(name = "Guest") {
-  console.log(`Hello, ${name}!`);
-}
-
-// Function with Rest Parameter
-function calculateSum(...numbers) {
-  let sum = 0;
-  for(let number of numbers){
-    sum += number;
+// Function returning multiple values [object]
+function getUserInfo() {
+  return {
+    userName: "name test",
+    userAge: "age test"
   }
-  console.log(sum);
 }
 
-// Boolean parameters
-function checkEligibility(isMember) {
-  console.log((isMember) ? "Eligible" 
-                        : "Not eligible");
+// Function return Array
+function getDimension() {
+  return [200, 300, 500];
 }
 
-// Functions with objects as parameters
-function printAddress({street, city, zip}) {
-  console.log(`Address: ${street}, ${city}, ${zip}`)
+// No return
+function sayHello() {
+  console.log("Hello");
 }
 
-// Functions with Arrays as parameters
-function printNumbers(numbers){
-  console.log(numbers);
+// Function with multiple return statements
+function checkAge(age) {
+  if(age > 18){
+    return "Adult";
+  } else {
+    return "Minor";
+  }
 }
 
-greet("Alice", 22);
-greet("John", 21);
-greet("Lousy", "29");
+let squareNum = getSquare(4);
+console.log(squareNum);
 
-greetPerson("Ron");
+console.log(getUserInfo());
+let {userName, userAge} = getUserInfo();
+console.log(userName, userAge);
 
-calculateSum(10,20);
-calculateSum(10,20,30);
-calculateSum(10,20,30,80);
+console.log(getDimension());
+let [width, height, depth] = getDimension();
+console.log(width, height, depth);
 
-checkEligibility(false);
+let message = sayHello();
+console.log(message);
 
-let address = {
-  street: "Street1",
-  city: "City1",
-  zip: "052754"
-};
-printAddress(address);
-printAddress({street: "ABC", city:"City22"});
-
-printNumbers([1,2,3,4,5,6]);
+console.log(checkAge(14));
+console.log(checkAge(24));
