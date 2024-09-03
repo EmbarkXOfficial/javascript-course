@@ -1,24 +1,44 @@
-// sayHello();
-// greet();
+/*
+Arrow functions provide a more concise way 
+for writing functions.
+*/
+function sayHello() {
+  console.log("Hello");
+}
 
 let greet = function() {
   console.log("Hello");
 }
 
-let multiply = function(a, b) {
-  return a * b;
+let greetArrow = () => console.log("Hello");
+
+let greetArrowMultiple = () => {
+  console.log("Hello 1");
+  console.log("Hello 2");
 }
 
-// sayHello();
-greet();
-console.log(multiply(10, 20));
-
-
-// Functions are objects
-function sayHello() {
-  console.log("Hello Again!");
+let greetArrowParam1 = (name) => {
+  console.log(`Hello 1 ${name}`);
+  console.log("Hello 2");
 }
+
+let greetArrowParam2 = (name, age) => {
+  console.log(`Hello 1 ${name}`);
+  console.log(`Hello 2 ${age}`);
+}
+
+let greetArrow1 = (name) => console.log("Hello", name);
 
 sayHello();
-let a = sayHello;
-a();
+greet();
+greetArrow();
+greetArrowMultiple();
+greetArrowParam1("John");
+greetArrowParam2("John", 32);
+greetArrow1("Nadar");
+
+
+// Return values
+let sum = (a,b) => a + b;
+
+console.log(sum(10,20));
