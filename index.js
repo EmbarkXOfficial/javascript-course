@@ -1,42 +1,36 @@
-/*
-TEMPLATE LITERALS
-Allows you to work with strings in a more 
-flexible and readable way
+console.log("Hello world!")
+console.log(123);
 
-SYNTAX: `${expression}`
-*/
+// Multiple values
+console.log("Name:","Alice","Age:",25);
+console.log("Name:","Alice","Age:" + 25);
 
-let studentName = 'Alice';
-let age = 17;
-let greeting = `Hello ${studentName}, you are ${age} year old`;
-console.log(greeting);
+// Use variables
+let x = 10;
+let y = 20;
+console.log("The value of x is",x);
+console.log("Sum is",x+y);
 
-// Multiline String
-let multilineString =  `This 
-is
-a 
-multiline 
-string`;
-console.log(multilineString)
+console.log(`Sum is ${x+y}`);
 
-// Expressions
-let a = 5;
-let b = 10;
-let result = `The sum of ${a} and ${b} is ${a+b}`;
-console.log(result);
-
-// Objects
-let user = {
-  firstName: "John",
-  lastName: "Doe",
-  age:33
+// Logging objects
+let person = {
+  name: "Charlie",
+  age: 28,
+  profession: "Developer"
 };
+console.log(person);
 
-let userInfo = `User Info:
-Name: ${user.firstName} ${user.lastName}
-Age: ${user.age}`;
-console.log(userInfo);
+// Formatted Output
+console.log("The value of x is %d",x);
+console.log("Hello %s, you are %d years old", "Alice", 22);
+
+// console methods
+console.error("This is an error");
+console.warn("This is a warning");
+console.info("This is a informational");
 
 
-let e = `This is a backtick \``
-console.log(e);
+// console table
+console.log(person);
+console.table(person);
