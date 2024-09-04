@@ -1,96 +1,28 @@
-// Array Methods
-// - `map()`: Transforms each element and 
-// returns a new array.
+const unitConverter = {
+  mToFt: function(meters) {
+    return meters * 3.28084
+  },
 
-function double(num) {
-  return num * 2;
-}
+  kgToLb: function(kilograms) {
+    return kilograms * 2.20462;
+  },
 
-let numbers = [1, 2, 3, 4, 5];
-let doubleNumbers = numbers.map(double);
-console.log(doubleNumbers);
+  cToF: function(celsius) {
+    return (celsius * 9/5) + 32;
+  }
+};
 
-// Using Anonymous Function
-let doubleAnonymous = numbers.map(function(num) {
-  return num * 2;
-});
-console.log(doubleAnonymous);
+document.getElementById('convert').onclick = () => {
+  let inputValue = parseFloat(document.getElementById('inputValue').value);
+  let conversionType = document.getElementById('conversionType').value;
 
-
-// Using Arrow Function
-let doubleArrow = numbers.map(num => num * 10);
-console.log(doubleArrow);
-
-
-
-// - `filter()`: Returns a new array with elements 
-//              that pass a condition.
-const evenNumbers = numbers.filter(num => num % 2 === 0);
-console.log(evenNumbers);
-
-
-
-// - `reduce()`: Reduces the array to a single value.
-let sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue);
-console.log(sum);
-
-
-
-// - `forEach()`: Executes a function for each array element.
-numbers.forEach(num => console.log(num));
-
-
-// - `find()`: Returns the first element that satisfies a 
-//              condition.
-let firstEven = numbers.find(num => num % 2 === 0);
-console.log(firstEven);
-
-
-// - `some()`: Checks if at least one element passes 
-//              a test.
-let hasNegative = [-1, 2, 3, 4].some(num => num < 0);
-console.log(hasNegative);
-
-
-// - `every()`: Checks if all elements pass a test.
-let hasEvery = [-1, -2, -3, -4].every(num => num < 0);
-console.log(hasEvery);
-
-
-// - `concat()`: Merges arrays into a new array.
-let moreNumbers = [6, 7, 8, 9];
-let newArray = numbers.concat(moreNumbers);
-console.log(newArray);
-
-
-// - `slice()`: Returns a portion of an array.
-let slicedNum = numbers.slice(1, 3);
-console.log(slicedNum);
-
-
-
-// - `splice()`: Modifies the array by 
-//                removing/replacing elements.
-let fruits = ["Apple", "Banana", "Orange"];
-fruits.splice(1,1,"Mango");
-console.log(fruits);
-
-
-
-// - `join()`: Joins all elements into a string.
-let allFruits = fruits.join(", ");
-console.log(allFruits);
-
-
-
-// - `reverse()`: Reverses the order of the elements.
-let reverseNumber = numbers.reverse();
-console.log(reverseNumber);
-
-
-
-// - `sort()`: Sorts the elements of an array.
-numbers = [3, 1, 10, 2]
-let sortedNum = numbers.sort((a, b) => a - b);
-console.log(sortedNum);
-
+  if(!isNaN(inputValue)){
+    let convertedValue;
+    convertedValue = conversionType === 'mToFt' ? unitConverter.mToFt(inputValue) :
+                  conversionType === 'kgToLb' ? unitConverter.kgToLb(inputValue) :
+                  unitConverter.cToF(inputValue);
+    document.getElementById('convertedValue').textContent = convertedValue.toFixed(2);
+  } else {
+    alert("Please enter a valid number");
+  }
+};
