@@ -1,28 +1,42 @@
-const unitConverter = {
-  mToFt: function(meters) {
-    return meters * 3.28084
+let todoApp = {
+  tasks: [],
+  addTask(task) {
+    this.tasks.push({text: task, completed: false});
+    this.renderTasks();
   },
 
-  kgToLb: function(kilograms) {
-    return kilograms * 2.20462;
+  toggleTask(index) {
+    this.tasks[index].completed = !this.tasks[index].completed;
+    this.renderTasks();
+  },
+  
+  removeCompletedTasks(){
+    this.tasks = this.tasks.filter(task => !task.completed);
+    this.renderTasks();
   },
 
-  cToF: function(celsius) {
-    return (celsius * 9/5) + 32;
+  renderTasks() {
+    let taskList = document.getElementById("taskList");
+    taskList.innerHTML = '';
+
+    this.tasks.forEach((task, index) => {
+      const li = document.createElement('li');
+      li.textContent = task.text;
+      li.onclick = () => this.toggleTask(index);
+
+      if(task.completed) {
+        li.classList.add('completed');
+      }
+
+      taskList.appendChild(li);
+    });
   }
 };
 
-document.getElementById('convert').onclick = () => {
-  let inputValue = parseFloat(document.getElementById('inputValue').value);
-  let conversionType = document.getElementById('conversionType').value;
-
-  if(!isNaN(inputValue)){
-    let convertedValue;
-    convertedValue = conversionType === 'mToFt' ? unitConverter.mToFt(inputValue) :
-                  conversionType === 'kgToLb' ? unitConverter.kgToLb(inputValue) :
-                  unitConverter.cToF(inputValue);
-    document.getElementById('convertedValue').textContent = convertedValue.toFixed(2);
-  } else {
-    alert("Please enter a valid number");
-  }
+document.getElementById("addTask").onclick = () => {
+  let taskInput = document.getElementById("taskInput");
+  todoApp.addTask(taskInput.value);
+  taskInput.value='';
 };
+
+todoApp.addTask("Learn Javascript");
