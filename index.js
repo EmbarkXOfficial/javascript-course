@@ -1,44 +1,76 @@
-/*
-Arrow functions provide a more concise way 
-for writing functions.
-*/
-function sayHello() {
-  console.log("Hello");
+let personAlice = {
+  name: "Alice",
+  age: 33,
+  greet: function(){
+    console.log(`Hi I am ${this.name}`);
+  }
 }
 
-let greet = function() {
-  console.log("Hello");
+let personJohn = {
+  name: "John",
+  age: 33,
+  greet: () => console.log(`Hi I am ${personJohn.name}`)
 }
 
-let greetArrow = () => console.log("Hello");
+personAlice.greet();
+personJohn.greet();
 
-let greetArrowMultiple = () => {
-  console.log("Hello 1");
-  console.log("Hello 2");
+
+// Counter
+let counter = {
+  value: 0,
+  increment: function(){
+    this.value += 1;
+    return this.value;
+  },
+  incrementBy: function(num){
+    this.value += num;
+    return this.value;
+  }
 }
 
-let greetArrowParam1 = (name) => {
-  console.log(`Hello 1 ${name}`);
-  console.log("Hello 2");
+console.log(counter.increment());
+console.log(counter.increment());
+console.log(counter.increment());
+console.log(counter.increment());
+
+console.log(counter.incrementBy(10));
+
+// Defining methods dynamically
+let dynamicMethod = {
+  value: 0
+};
+
+console.log(dynamicMethod.value);
+
+dynamicMethod.sayHi = function() {
+  console.log("Hello Dynamic");
 }
 
-let greetArrowParam2 = (name, age) => {
-  console.log(`Hello 1 ${name}`);
-  console.log(`Hello 2 ${age}`);
+dynamicMethod.sayHi();
+
+
+// Nested
+let car = {
+  brand: "Toyota",
+  specs: {
+    speed: 120,
+    displaySpecs: function(){
+      console.log(`Speed `, this.speed);
+    }
+  }
+} 
+
+car.specs.displaySpecs();
+
+
+// Shorthand version
+let personShortHand = {
+  name: "Short Hand",
+  age: 33,
+  greet(){
+    console.log(`Hi I am ${this.name}`);
+  }
 }
 
-let greetArrow1 = (name) => console.log("Hello", name);
-
-sayHello();
-greet();
-greetArrow();
-greetArrowMultiple();
-greetArrowParam1("John");
-greetArrowParam2("John", 32);
-greetArrow1("Nadar");
-
-
-// Return values
-let sum = (a,b) => a + b;
-
-console.log(sum(10,20));
+personShortHand.greet();
